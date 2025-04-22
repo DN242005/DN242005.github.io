@@ -1,4 +1,7 @@
-<p>certificates works!</p>
-<p>
-  {{certificatesService.accesoCertificates}}
-</p>
+<ul *ngIf="certificates.length > 0">
+  <li *ngFor="let cert of certificates" style="margin-bottom: 1em;">
+    <strong>{{ cert.name }}</strong><br>
+    <strong>Emitido:</strong> {{ cert.issueDate }}<br>
+    <strong>Expira:</strong> {{ cert.expirationDate }}
+  </li>
+</ul>

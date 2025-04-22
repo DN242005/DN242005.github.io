@@ -1,10 +1,19 @@
 import { Injectable } from '@angular/core';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
+import { Skill } from '../../models/skills/skill.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SkillsService {
-  accesoSkills = "skills service running...";
+  private dbPath = '/skills';
+  skillsRef: AngularFirestoreCollection<Skill>;
 
-  constructor() { }
+  constructor(private db: AngularFirestore) {
+    this.skillsRef = db.collection<Skill>(this.dbPath);
+  }
+
+  getSkills(): AngularFirestoreCollection<Skill> {
+    return this.skillsRef;
+  }
 }

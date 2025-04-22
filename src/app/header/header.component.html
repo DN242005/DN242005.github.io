@@ -1,15 +1,21 @@
-<tr *ngIf="header">
-  <td>
-    <strong>{{ header.name }}</strong><br>
-    {{ header.goalLife }}
-  </td>
-  <td>
-    <img [src]="header.photoUrl" width="200" height="200" alt="Foto de {{ header.name }}">
-  </td>
-  <td>
-    {{ header.email }}<br>
-    {{ header.phoneNumber }}<br>
-    {{ header.location }}<br>
-    {{ header.socialNetwork }}
-  </td>
-</tr>
+<div class="header-vertical" *ngIf="header">
+  <!-- Foto de perfil -->
+  <img [src]="header.photoUrl" alt="Foto de {{ header.name }}" class="cv-photo" />
+
+  <!-- Información personal -->
+  <div class="header-info">
+    <h1 class="cv-name-centered">{{ header.name }}</h1>
+    <p>{{ header.goalLife }}</p>
+    <p>{{ header.email }}</p>
+    <p>{{ header.phoneNumber }}</p>
+    <p>{{ header.location }}</p>
+
+    <!-- Link de red social (adaptable) -->
+    <p *ngIf="header.social">
+      <a [href]="header.social" target="_blank">
+        <img [src]="getSocialIcon(header.social)" width="16" style="vertical-align: middle; margin-right: 5px;">
+        Ver perfil en {{ getSocialName(header.social) }}
+      </a>
+    </p>
+  </div>
+</div>

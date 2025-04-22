@@ -1,20 +1,57 @@
-<table border="1">
-  <tr>
-    <td colspan="2"> <app-header></app-header> </td>
-  </tr>
+<div class="cv-container">
+  <!-- COLUMNA IZQUIERDA -->
+  <div class="cv-sidebar">
+    <!-- Header con foto y datos personales -->
+    <app-header></app-header>
 
-  <tr>
-    <td> <app-work-experience></app-work-experience> </td>
-    <td> <app-skills></app-skills> </td>
-  </tr>
+    <!-- Acerca de mí -->
+    <div class="cv-section">
+      <h2>Acerca de mí</h2>
+      <!-- Puedes dejar esto estático o mover "goalLife" a <app-header> -->
+      <p>Soy desarrollador en formación apasionado por crear interfaces creativas, edición multimedia y soluciones web modernas.</p>
+    </div>
 
-  <tr>
-    <td> <app-education></app-education> </td>
-    <td> <app-certificates></app-certificates> </td>
-  </tr>
+    <!-- Experiencia Laboral -->
+    <div class="cv-section">
+      <h2>Experiencia Laboral</h2>
+      <app-work-experience></app-work-experience>
+    </div>
 
-  <tr>
-    <td> <app-languages></app-languages> </td>
-    <td> <app-interests></app-interests> </td>
-  </tr>
-</table>
+    <!-- Intereses -->
+    <div class="cv-section">
+      <h2>Intereses</h2>
+      <app-interests></app-interests>
+    </div>
+  </div>
+
+  <!-- COLUMNA DERECHA -->
+  <div class="cv-main">
+    <!-- Nombre completo (ya se muestra en app-header, puedes eliminarlo o moverlo allí) -->
+    <!-- Si quieres eliminar errores, NO accedas a header aquí -->
+    <!-- <div class="cv-section"> <h1 class="cv-name">{{ header?.name }}</h1> </div> -->
+
+    <!-- Educación -->
+    <div class="cv-section">
+      <h2>Educación</h2>
+      <app-education></app-education>
+    </div>
+
+    <!-- Certificados -->
+    <div class="cv-section">
+      <h2>Certificados</h2>
+      <app-certificates></app-certificates>
+    </div>
+
+    <!-- Lenguajes -->
+    <div class="cv-section">
+      <h2>Lenguajes</h2>
+      <app-languages></app-languages>
+    </div>
+
+    <!-- Habilidades -->
+    <div class="cv-section">
+      <h2>Habilidades</h2>
+      <app-skills></app-skills>
+    </div>
+  </div>
+</div>

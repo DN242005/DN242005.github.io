@@ -1,4 +1,7 @@
-<p>languages works!</p>
-<p>
-  {{languagesService.accesoLanguages}}
-</p>
+<ul *ngIf="languages.length > 0">
+  <li *ngFor="let lang of languages" style="margin-bottom: 1em;">
+    <strong>{{ lang.name }}</strong><br>
+    <strong>Certificado:</strong> {{ lang.certification }}<br>
+    <strong>Nivel:</strong> {{ lang.proficiency }}
+  </li>
+</ul>

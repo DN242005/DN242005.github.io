@@ -1,4 +1,8 @@
-<p>education works!</p>
-<p>
-  {{educationService.accesoEducation}}
-</p>
+<ul *ngIf="educationList.length > 0">
+  <li *ngFor="let edu of educationList" style="margin-bottom: 1.5em;">
+    <strong>{{ edu.startDate }} - {{ edu.endDate }}</strong><br>
+    <strong>{{ edu.institution }}</strong><br>
+    <em>{{ edu.fieldOfStudy }}</em><br>
+    <strong>Logros:</strong> {{ edu.accomplishments }}
+  </li>
+</ul>

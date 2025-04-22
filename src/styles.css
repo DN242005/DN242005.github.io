@@ -1,1 +1,84 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+.cv-container {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.cv-sidebar {
+  background-color: #1abc9c;
+  color: white;
+  padding: 20px;
+  width: 35%;
+}
+
+.cv-main {
+  background-color: #ffffff;
+  padding: 30px;
+  width: 65%;
+}
+.cv-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 1px solid white;
+  object-fit: cover;
+  display: block;
+  margin:0 auto;
+}
+
+.cv-name {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.cv-location {
+  text-align: center;
+  font-style: italic;
+}
+
+.cv-section {
+  margin-top: 25px;
+}
+
+.cv-section h2 {
+  font-size: 18px;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.cv-main .cv-section h2 {
+  color: #1abc9c;
+  border-bottom: 1px solid #1abc9c;
+}
+
+.cv-main p {
+  margin-bottom: 10px;
+}
+
+.cv-sidebar ul,
+.cv-main ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cv-sidebar ul li,
+.cv-main ul li {
+  padding: 5px 0;
+}
+
+.cv-name-centered {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 22px;
+  font-weight: bold;
+  color: white; /* si el fondo es turquesa */
+}

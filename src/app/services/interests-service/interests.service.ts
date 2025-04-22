@@ -1,10 +1,19 @@
 import { Injectable } from '@angular/core';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
+import { Interest } from '../../models/interests/interest.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class InterestsService {
-  accesoInterests = "interests service running...";
+  private dbPath = '/interests';
+  interestsRef: AngularFirestoreCollection<Interest>;
 
-  constructor() { }
+  constructor(private db: AngularFirestore) {
+    this.interestsRef = db.collection<Interest>(this.dbPath);
+  }
+
+  getInterests(): AngularFirestoreCollection<Interest> {
+    return this.interestsRef;
+  }
 }

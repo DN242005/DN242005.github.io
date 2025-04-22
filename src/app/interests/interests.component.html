@@ -1,4 +1,9 @@
-<p>interests works!</p>
-<p>
-  {{interestsService.accesoInterests}}
-</p>
+<ul *ngIf="interests.length > 0">
+  <li *ngFor="let item of interests" style="margin-bottom: 1em;">
+    <strong>{{ item.interestName }}</strong><br>
+    <em>{{ item.description }}</em><br><br>
+
+    <strong *ngIf="item.interestName2">{{ item.interestName2 }}</strong><br>
+    <em *ngIf="item.description2">{{ item.description2 }}</em>
+  </li>
+</ul>

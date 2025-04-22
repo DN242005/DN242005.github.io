@@ -5,11 +5,13 @@
   <!-- Información personal -->
   <div class="header-info">
     <h1 class="cv-name-centered">{{ header.name }}</h1>
+
+    <!-- Sección de contacto -->
+    <h3 class="cv-contact-title">Contacto</h3>
     <p>{{ header.goalLife }}</p>
     <p>{{ header.email }}</p>
     <p>{{ header.phoneNumber }}</p>
     <p>{{ header.location }}</p>
-
     <!-- Link de red social (adaptable) -->
     <p *ngIf="header.social">
       <a [href]="header.social" target="_blank">
